@@ -1,18 +1,30 @@
 //Components -> containers
-import Container from "../components/Container"
+import Container_sidebar from "../components/Container_sidebar"
 import Head from "next/head"
+
 
 //Main build. 
 const Dasboard = () => (
     
-    <Container>
+    <Container_sidebar>
         <Head>
             <title>Proyect jeager - Dasboard</title>
         </Head>
-            <h1 className="text-3xl font-bold underline">
-           Dasboardas
-            </h1>
-    </Container>
+
+         <div>
+            <h1> QOD</h1>
+
+
+
+
+
+
+
+
+        </div> 
+
+
+    </Container_sidebar>
 )
 
 
