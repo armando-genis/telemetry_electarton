@@ -16,11 +16,11 @@ export default function Container_sidebar(props)  {
             
         </Head>
 
-        <div className="min-h-screen grid grid-col-1 lg:grid-cols-6 dark:bg-gray-900 shadow">
+        <div className="min-h-screen grid grid-col-1 lg:grid-cols-6 bg-gray-900 shadow">
 
             {/* SideBar */}
 
-            <div className={`fixed lg:static transition-all  ${open ? "top-0" : "top-full"} w-full h-full  col-span-1`}>
+            <div className={`fixed lg:static lg:overflow-hidden overflow-y-scroll transition-all duration-700 ${open ? "bottom-0" : "bottom-full"} w-full h-full  col-span-1 `}>
                 <Navegation_sidebar/>
             </div>
 
@@ -36,7 +36,7 @@ export default function Container_sidebar(props)  {
 
 
             {/* Dashboard */}
-            <div className="dark:bg-gray-800 col-span-5">
+            <div className="bg-gray-800 col-span-5 px-6">
 
                 {props.children}
                 
