@@ -55,10 +55,8 @@ export default () => (
     <Line
       data={data}
       options={options}
-      width = {150}
-      height = {200}
-
-
+      width = {170}
+      height = {250}
 
     />
   </div>

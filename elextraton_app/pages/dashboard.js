@@ -3,15 +3,24 @@ import Container_sidebar from "../components/Container_sidebar"
 import LineGraph1 from "../components/chart_heart"
 import LineGraph2 from "../components/chart_velocity"
 import ChangingProgressProvider from "../Components/ChangingProgressProvider"
+import  Component_map  from "../Components/map_component";
+
+
+
 import Head from "next/head"
-import { RiDashboardLine,RiMapPinFill,RiSteeringFill,RiBroadcastLine,RiHeartPulseFill,RiDashboard2Line,RiBatteryChargeFill,RiCompass2Fill} from "react-icons/ri";
+import { RiDashboardLine,RiMapPinFill,RiSteeringFill,RiBroadcastLine,RiHeartPulseFill,RiDashboard2Line,RiBatteryChargeFill,RiSendPlane2Fill,RiCompass2Fill} from "react-icons/ri";
 import { CircularProgressbar,buildStyles  } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import { ImMeter2 } from "react-icons/im";
+
+
 
 
 const percentage = 50;
 //Main build. 
 const Dasboard = () => (
+
+
     
     <Container_sidebar>
         <Head>
@@ -20,13 +29,12 @@ const Dasboard = () => (
 
         {/* Content */}
         <header className="flex items-center justify-between ">
-            <div className="lg:pt-7 ">
+            <div className="mt-2">
 
-                <div  className="flex items-center p-4 space-x-4 w-full max-w-xs  rounded-lg divide-x shadow text-white divide-gray-700 space-x bg-gray-900">
-                    <div className="text-xl text-blue-700">
-                        <RiDashboardLine/>
-                    </div>
-                    <div className="pl-4 text-xl font-normal">Telemetry board</div>
+                <div  className="w-full text-white">
+
+                    <div className=" font-bold text-xl">4:58 PM</div>
+                    <p className="text-lg text-gray-500">Saturday, 26 Octuber 2022</p>
                 </div>
 
             </div>
@@ -34,30 +42,122 @@ const Dasboard = () => (
 
         {/* Dashboard */}
         <div className="pt-2 grid gap-x-2 gap-y-2 lg:grid-cols-3 grid-cols-1 ">
-            <div>
 
-                <div className="min-w-fit rounded-lg shadow-md bg-gray-900 ">
-                    <div className="inline-flex flex-shrink-0 justify-center items-center w-11 h-11 rounded-br-lg text-blue-700 bg-gray-800">
+
+            <div className="row-span-2  overflow-hidden ">
+
+                <div className="min-w-fit h-[28rem] rounded-lg shadow-md bg-gray-900 ">
+                    <div className=" absolute inline-flex flex-shrink-0 justify-center items-center w-11 h-11 rounded-br-lg text-blue-700 bg-gray-800 z-[3]">
                         <div className="text-2xl">
                             <RiMapPinFill/>
                         </div>
                     </div>
-                    <div className="p-5">
-                        <a href="#">
-                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                        </a>
-                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                        <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            Read more
-                            <svg aria-hidden="true" className="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </a>
+                    <div className="p-4">
+
+                            {/* aqui algo */}
+                            <Component_map/>
                         
                     </div>                    
+                </div>
+                
+
+
+                <div className="pt-2">
+
+                    <div className="rounded-lg min-w-fit shadow-md  h-[25.5rem] bg-gray-900">
+                        <div className="absolute inline-flex flex-shrink-0 justify-center items-center w-11 h-11 rounded-br-lg text-blue-700 bg-gray-800">
+                            <div className="text-2xl">
+                                <ImMeter2/>
+                            </div>
+                        </div>
+                        <div className="p-5">
+
+                            <div className="mt-10 justify-items-stretch grid gap-x-2 gap-y-2 grid-cols-1 ">
+
+                               <div className="justify-self-center min-w-fit min-h-fit relative">
+
+                                    <div className="w-96 h-[20rem] relative grid">
+
+                                        <div className="absolute w-[0.5rem] h-[14rem] border-2 border-gray-300 place-self-center rotate-[-90deg] z-[9]"></div>
+                                        <div className="absolute w-10 h-10 border-2 border-gray-300 place-self-center rounded-full z-[9] left-[40px]"></div>
+                                        <div className="absolute w-10 h-10 border-2 border-gray-300 place-self-center rounded-full z-[9] right-[40px]"></div>
+
+
+                                        <div className="absolute w-[0.5rem] h-[2.5rem] border-2 border-gray-300 place-self-center rotate-[0deg] z-[9] left-[55px] top-[101px] "></div>
+                                        <div className="absolute w-[0.5rem] h-[2.5rem] border-2 border-gray-300 place-self-center rotate-[0deg] z-[9] left-[55px] bottom-[101px] "></div>
+                                        <div className="absolute w-[0.5rem] h-[2.5rem] border-2 border-gray-300 place-self-center rotate-[0deg] z-[9] right-[55px] top-[101px] "></div>
+                                        <div className="absolute w-[0.5rem] h-[2.5rem] border-2 border-gray-300 place-self-center rotate-[0deg] z-[9] right-[55px] bottom-[101px] "></div>
+
+                                        
+
+                                        <div className="absolute w-[2.5rem] h-[1rem] rounded-t-lg border-2 border-gray-300 place-self-center rotate-[0deg] z-[9] right-[40px] bottom-[87px] "></div>
+                                        <div className="absolute w-[2.5rem] h-[1rem] rounded-t-lg border-2 border-gray-300 place-self-center rotate-[0deg] z-[9] left-[40px] bottom-[87px] "></div>
+
+                                        <div className="absolute w-[2.5rem] h-[1rem] rounded-b-lg border-2 border-gray-300 place-self-center rotate-[0deg] z-[9] left-[40px] top-[87px] "></div>
+                                        <div className="absolute w-[2.5rem] h-[1rem] rounded-b-lg border-2 border-gray-300 place-self-center rotate-[0deg] z-[9] right-[40px] top-[87px] "></div>
+
+                                        <div className="absolute w-[4.5rem] h-[1.5rem] rounded-md border-2 border-gray-300 place-self-center rotate-[0deg] z-[9] right-[25px] top-[65px] "></div>
+                                        <div className="absolute w-[4.5rem] h-[1.5rem] rounded-md border-2 border-gray-300 place-self-center rotate-[0deg] z-[9] right-[25px] bottom-[65px] "></div>
+
+                                        <div className="absolute w-[4.5rem] h-[1.5rem] rounded-md border-2 border-gray-300 place-self-center rotate-[0deg] z-[9] left-[25px] bottom-[65px] "></div>
+                                        <div className="absolute w-[4.5rem] h-[1.5rem] rounded-md border-2 border-gray-300 place-self-center rotate-[0deg] z-[9] left-[25px] top-[65px] "></div>
+
+                                        {/* PRESSURE MESSURE BACK LEFT TIRE */}
+                                        <div className="absolute w-[6rem] h-[4rem] z-[9] left-[10px] top-[0px]">
+                                            <h5 className=" text-2xl text-center font-bold tracking-wide text-gray-900 dark:text-white">32</h5>
+                                            <p className=" text-center  text-sm text-gray-500">PSI.</p>
+                                        </div>
+
+                                        {/* PRESSURE MESSURE BACK RIGHT TIRE */}
+                                        <div className="absolute w-[6rem] h-[4rem] z-[9] left-[10px] bottom-[0px]">
+                                            <h5 className=" text-2xl text-center font-bold tracking-wide text-gray-900 dark:text-white">32</h5>
+                                            <p className=" text-center  text-sm text-gray-500">PSI.</p>
+                                        </div>
+
+                                        {/* PRESSURE MESSURE FRONT LEFT TIRE */}
+                                        <div className="absolute w-[6rem] h-[4rem] z-[9] right-[10px] top-[0px]">
+                                            <h5 className=" text-2xl tracking-wide text-center font-bold text-gray-900 dark:text-white">32</h5>
+                                            <p className=" text-center  text-sm text-gray-500">PSI.</p>
+                                        </div>
+
+                                        {/* PRESSURE MESSURE FRONT RIGHT TIRE */}
+                                        <div className="absolute w-[6rem] h-[4rem] z-[9] right-[10px] bottom-[0px]">
+                                            <h5 className=" text-2xl tracking-wide text-center font-bold text-gray-900 dark:text-white">32</h5>
+                                            <p className=" text-center  text-sm text-gray-500">PSI.</p>
+                                        </div>
+
+
+                                        <div className="text-white absolute z-[9] right-[20px] top-[150px]">
+                                            <RiSendPlane2Fill/>
+                                        </div>
+
+
+                                        <div className="absolute w-[14rem] h-[2rem] place-self-center rotate-[0deg] z-[9] top-[0px]" >
+                                            <p className=" text-center  text-xl text-gray-500">Tire pressure.</p>
+                                        </div>
+                                        
+
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            
+                        </div>    
+                    
+
+                    </div>
+
                 </div>
 
             </div>
             <div className="row-span-2 cursor-cell overflow-hidden ">
-                <div className="min-w-fit  h-[52rem] rounded-lg shadow-md bg-gray-900 ">
+                <div className="min-w-fit  h-[54rem] rounded-lg shadow-md bg-gray-900 ">
                     <div className="absolute inline-flex flex-shrink-0 justify-center items-center w-11 h-11 rounded-br-lg text-indigo-600 bg-gray-800">
                         <div className="text-2xl">
                             <RiSteeringFill/>
@@ -68,7 +168,7 @@ const Dasboard = () => (
                         
                         <div className="justify-self-center min-w-fit min-h-fit relative">
 
-                            <div className="h-7 w-90 relative">
+                            <div className="h-7 relative">
 
 
                                 <div className="absolute text-indigo-600 text-3xl right-[14px] top-[50px] "> 
@@ -258,13 +358,13 @@ const Dasboard = () => (
                                     </div>
                                 </div>
 
-                                <div className="ml-2 mb-1 text-base font-medium text-indigo-600">75%</div>
+                                <div className="ml-2 mb-1 text-base font-medium text-indigo-600">30km</div>
                             </div>
 
 
                         </div>
 
-                        <div className="justify-self-center w-[34rem] h-20 relative bottom-12">
+                        <div className="justify-self-center w-[40rem] h-[14rem] relative bottom-12 overflow-hidden ">
                             <LineGraph2/>
                         </div>
 
@@ -301,9 +401,10 @@ const Dasboard = () => (
                         </div>                    
                     </div>
 
+
                     <div className="pt-2">
 
-                        <div className="rounded-lg shadow-md bg-gray-900">
+                        <div className="rounded-lg shadow-md  h-[41.5rem] bg-gray-900">
                             <div className=" inline-flex flex-shrink-0 justify-center items-center w-11 h-11 rounded-br-lg text-blue-700 bg-gray-800">
                                 <div className="text-2xl">
                                     <RiBroadcastLine/>
@@ -311,7 +412,7 @@ const Dasboard = () => (
                             </div>
                             <div className="p-5">
 
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                                
 
 
                                 
@@ -330,12 +431,14 @@ const Dasboard = () => (
 
 
             </div>
-            <div>
-                04
-            </div>
+            
+
 
 
         </div>
+        
+        
+        
         
 
 
